@@ -15,8 +15,12 @@ def training(prof):
 
 
 @app.route('/list_prof/<list_>')
-def list_prof(list_):
-    return render_template("ex3.html", list_=list_)
+def prof_list(list_):
+    list_prof = ['инженер-исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач',
+                 'инженер по терраформированию', 'климатолог', 'специалист по радиационной защите',
+                 'астрогеолог', 'гляциолог', 'инженер жизнеобеспечения', 'метеоролог',
+                 'оператор марсохода', 'киберинженер', 'штурман', 'пилот дронов']
+    return render_template("ex3.html", list_=list_, list_prof=list_prof)
 
 
 @app.route('/answer')
