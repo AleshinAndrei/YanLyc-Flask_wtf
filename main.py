@@ -60,5 +60,11 @@ def login():
     return render_template('login.html', title='Доступ', form=form)
 
 
+@app.route('/distribution')
+def distribution():
+    list_ = ['Ридл Скотт', 'Энди Уир', 'Марк Уотни', 'Венката Капур', 'Тедди Сандерс', 'Шон Бин']
+    return render_template('distribution.html', title='Размещение', list_=list_)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
